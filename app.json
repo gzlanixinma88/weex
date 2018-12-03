@@ -1,0 +1,29 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/join/join",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#ffb6c1",
+    "navigationBarTitleText": "志玲的生活",
+    "navigationBarTextStyle":"block"
+  },
+  "tabBar": {
+    "selectedColor": "#000",
+    "backgroundColor": "#ffb6c1",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-selected.png"
+    },
+    {
+      "pagePath": "pages/join/join",
+      "text": "加入",
+      "iconPath": "images/join-selected.png",
+      "selectedIconPath": "images/join.png"
+    }]
+  }
+}
