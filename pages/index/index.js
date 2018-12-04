@@ -4,51 +4,59 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    imgUrls: [
+      { url: '/images/ban1.png' },
+      { url: '/images/ban2.png' },
+      { url: '/images/ban3.png' },
+      { url: '/images/ban4.png' }
+    ],
+    indicatorDots: false,
+    autoplay: false,
+    interval: 5000,
+    duration: 1000,
+    lists:[
+      {
+        logo:"/images/ban1.png",
+        title:"北京",
+        desc:"北京的景色真美宿舍楼不好用hi丁接电话滴 "
+      },
+      {
+        logo: "/images/boy.png",
+        title: "上海",
+        desc: "上海的帅哥真多"
+      },
+      {
+        logo: "/images/ban3.png",
+        title: "武汉",
+        desc: "武汉的好吃的真多"
+      },
+      {
+        logo: "/images/mala.png",
+        title: "四川",
+        desc: "四川的麻辣烫真带劲"
+      }
+    ]
   },
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../logs/logs'
+  onLoad:function(){
+    this.setData({
+      test:'01',
+      list: ['/images/ban1.png', '/images/boy.png', '/images/ban3.png','/images/mala.png']
     })
   },
-  onLoad: function () {
-    if (app.globalData.userInfo) {
-      this.setData({
-        userInfo: app.globalData.userInfo,
-        hasUserInfo: true
-      })
-    } else if (this.data.canIUse){
-      // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-      // 所以此处加入 callback 以防止这种情况
-      app.userInfoReadyCallback = res => {
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    } else {
-      // 在没有 open-type=getUserInfo 版本的兼容处理
-      wx.getUserInfo({
-        success: res => {
-          app.globalData.userInfo = res.userInfo
-          this.setData({
-            userInfo: res.userInfo,
-            hasUserInfo: true
-          })
-        }
-      })
-    }
-  },
-  getUserInfo: function(e) {
+  toDetail:function(e){
     console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
+    var index = e.currentTarget.dataset.index;
+    console.log(index)
+    wx.navigateTo({
+      url: '../detail/detail',
+    })
+  },
+  bigLogo: function (event){
+    var src = event.currentTarget.dataset.src;//获取data-src
+    var imgList = event.currentTarget.dataset.list;//获取data-list   图片预览
+    wx.previewImage({
+      current: src, // 当前显示图片的http链接
+      urls: imgList // 需要预览的图片http链接列表
     })
   }
 })

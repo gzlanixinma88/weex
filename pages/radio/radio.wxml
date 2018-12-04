@@ -1,0 +1,13 @@
+<!--pages/radio/radio.wxml-->
+<radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}" color="#fff"/>{{item.value}}
+  </label>
+</radio-group>
+
+<radio-group class="top">
+  <label class='radio'>
+    <radio class='{{is_hook?"checked":""}}'  color="#fff"/>我已阅读并同意
+    <text class='blue' bindtap='copyright_protocol'>《版权协议》</text>
+  </label>
+</radio-group>

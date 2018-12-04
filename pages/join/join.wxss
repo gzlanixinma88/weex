@@ -1,1 +1,47 @@
 /* pages/join/join.wxss */
+.banner{
+  width: 100%;
+  height: 340rpx;
+}
+.ban{
+  width: 100%;
+  height: 340rpx;
+}
+.block{
+  background: #fff;
+  margin-top: 20rpx;
+  padding:0 0 30rpx;
+}
+.block-title{
+  font-size: 34rpx;
+  padding: 10px;
+  position: relative;
+  text-indent: 40rpx;
+  color: #601692;
+}
+.block-title::before{
+  position: absolute;
+  left: 30rpx;
+  top:30rpx;
+  content: "";
+  width: 10rpx;
+  height: 40rpx;
+  background: #e7a8b2;
+}
+.block-desc{
+  line-height: 50rpx;
+  display: block;
+  text-indent: 15px;
+  font-size: 32rpx;
+  text-align: justify;
+  color: #000;
+  padding: 0 30rpx 20rpx;
+}
+.btn{
+  width: 80%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 40rpx;
+  background: #420cbe;
+  color:#fff;
+}

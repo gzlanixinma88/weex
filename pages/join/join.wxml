@@ -1,2 +1,23 @@
-<!--pages/join/join.wxml-->
-<text>pages/join/join.wxml</text>
+<view class='banner'>
+  <image class='ban' src='/images/logo.png'></image>
+</view>
+  <view class='block'>
+    <view class='block-title'>关于我们</view>
+    <text class='block-desc'>年底了，最近总想出去走走，毕竟世界这么大我想去看看，后来摸了摸兜，就出去买了个地球仪。我不仅能看看，我 ... 买个地球仪吧，你不但可以看看，还可以转转。</text>
+  </view>
+  <view class='block'>
+    <view class='block-title'>商务合作</view>
+    <text class='block-desc'>欢迎加入我们，合作热线：17600542702</text>
+    <text class='block-desc'>1.让您收入更多</text>
+    <text class='block-desc'>2.诚邀各大又是你的公司合作</text>
+    <text class='block-desc'>3.边界的人事管理，让您提高工作效率</text>
+    <text class='block-desc'>4.完善的管理体制，提高您的知名度</text>
+  </view>
+  <view class='block'>
+    <view class='block-title'>联系我们</view>
+    <text class='block-desc'>电话：17600542702(高女士)</text>
+    <text class='block-desc'>微信：17600542702</text>
+    <text class='block-desc'> QQ：1261558503</text>
+    <text class='block-desc'>地址：北京市昌平区</text>
+    <button class='btn' bindtap='tell'>电话咨询</button>
+  </view>

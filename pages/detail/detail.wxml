@@ -1,0 +1,7 @@
+<view class='lists'>
+  <view wx:for='{{lists}}'>
+    <view class='logo'><image src='{{item.logo}}'/></view>
+    <view class='item'>{{item.title}}</view>
+    <text class='desc'>{{item.desc}}</text>
+  </view>
+</view>

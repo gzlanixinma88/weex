@@ -9,11 +9,13 @@
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
-		"autoAudits": false
+		"nodeModules": true,
+		"autoAudits": true,
+		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.0.4",
-	"appid": "wxe01cb581314050bc",
+	"libVersion": "2.4.1",
+	"appid": "wxac9dc12c626db36f",
 	"projectname": "wexx",
 	"debugOptions": {
 		"hidedInDevtools": []
@@ -37,12 +39,24 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 0,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
 					"name": "join",
-					"pathName": "pages/join/join"
+					"pathName": "pages/join/join",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "radio",
+					"pathName": "pages/radio/radio",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/detail/detail"
 				}
 			]
 		}
